@@ -53,14 +53,34 @@ function createItensObject() {
     else localStorage.removeItem('produtos_checados');
 }
 
-
-
 function readItensObject() {
-    var readItens = (localStorage.getItem('produtos_checados') !== null)?JSON.parse(localStorage.getItem('produtos_checados')):false;
-    var products = readItens['products'];
-    var quantity = products[0].quantidade;
-    var prodQty = document.querySelectorAll(".product-list .product div span");
-    prodQty.forEach(function(el){
-        el.innerText = quantity;
-    });
+    if(localStorage.getItem('produtos_checados') !== null) {
+        var readItens = (localStorage.getItem('produtos_checados') !== null)?JSON.parse(localStorage.getItem('produtos_checados')):false;
+        var products = readItens['products'];
+        var quantity = products[0].quantidade;
+        var prodQty = document.querySelectorAll(".product-list .product div span");
+        prodQty.forEach(function(el){
+            el.innerText = quantity;
+        });
+        names = []
+        products.forEach(function(el){
+            names.push(el.item)
+        });
+
+        if(names.indexOf('React')<= -1) document.getElementById('react').remove();
+        if(names.indexOf('Vue')<= -1) document.getElementById('vue').remove();
+        if(names.indexOf('Angular')<= -1) document.getElementById('angular').remove();
+    }else{
+        if(localStorage.getItem('produtos_checados') === null) document.querySelector('.checkout-column.column1').remove();
+        var noProducts = document.createElement("div");
+        noProducts.className = "no-products-message";
+        var conteudoDiv = document.createTextNode("Nenhum produto foi selecionado!");
+        noProducts.appendChild(conteudoDiv);
+        var divPai = document.querySelector(".checkout-container");
+        divPai.appendChild(noProducts);
+        var buttonText = document.querySelector('#button');
+        buttonText.innerText = 'voltar';
+    }
+
+    
 }
