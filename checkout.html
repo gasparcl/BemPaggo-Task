@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="./src/style-checkout.css">
+</head>
+<body id="checkout" onload="readItensObject()">
+    <section id="main">
+        <header id="header">
+            <p class="bold">Checkout <br><br><br></p>
+            <div class="header-img checkout-header-img">
+                <img src="./src/imgs/Removal-930.png" alt="box">
+            </div>
+        </header>
+        <div class="checkout-container">
+            <div class="checkout-column column1">
+                <ul class="product-list"><h2>Resumo dos itens</h2>
+                    <li class="product">
+                        <img src="./src/imgs/react.png" alt="react-logo">
+                        <p>React</p>
+                        <div>
+                            <p>quantidade</p>
+                            <p><span></span></p>
+                        </div>
+                    </li>
+                    <li class="product">
+                        <img src="./src/imgs/vuejs.png" alt="vue-logo">
+                        <p>Vue</p>
+                        <div>
+                            <p>quantidade</p>
+                            <p><span></span></p>
+                        </div>
+                    </li>
+                    <li class="product">
+                        <img src="./src/imgs/angular.png" alt="angular-logo">
+                        <p>Angular</p>
+                        <div>
+                            <p>quantidade</p>
+                            <p><span></span></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- <div class="checkout-column column2">
+                <ul class="product-list"><h2>Pagamento</h2>
+                </ul>
+            </div> -->
+        </div>
+        <footer id="footer-container-checkout">
+            <img class="security" src="./src/imgs/stamp_encryptssl_cart.png" alt="securutyStamp">
+            <a href="./index.html" id="button" type="button">finalizar</a>
+        </footer>
+    </section>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

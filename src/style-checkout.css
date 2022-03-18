@@ -1,0 +1,141 @@
+.checkout-header-img {
+    top: 23px !important;
+    transform: rotate3d(1, 1, 1, 3deg) !important;
+}
+
+.checkout-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 95%;
+    box-shadow: 0px 0px 20px -5px #bbb;
+    margin: 15px auto;
+    height: 60%;
+    justify-content: space-evenly;
+}
+
+.checkout-column {
+    display: inline-flex;
+    flex-direction: column;
+    
+    border: 1px solid #bbb;
+    margin: 5px 0;
+}
+
+.column1 {
+    width: 98%;
+}
+
+.column2 {
+    width: 30%;
+}
+
+.product-list,
+.checkout-form {
+    border: 1px solid #bbb;
+    width: 97%;
+    margin: 10px auto;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    box-shadow: 0 0 4px -2px;
+    min-height: 96%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.checkout-form {
+    justify-content: flex-start;
+}
+
+.product-list h2,
+.checkout-form h2 {
+    font-size: 1.2rem;
+}
+
+.product {
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 5px 0px #bbb;
+    min-height: 110px;
+    height: auto;
+    margin: 0px auto;
+    width: 97%;
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    align-items: center;
+}
+
+.product img {
+    display: inline-block;
+    width: auto;
+    max-height: 60px;
+    margin: 0 20px;
+}
+
+.product div {
+    position: absolute;
+    right: 26px;
+    border: 1px solid #ddd;
+    padding: 9px;
+}
+
+#footer-container-checkout {
+    background: #dce3e8;
+    width: 100%;
+    position: absolute;
+    border-radius: 0 0 7px 7px;
+    padding: 1rem;
+    bottom: 0;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media only screen and (max-width:768px){
+
+    #checkout #main {
+        width: 96%;
+        min-height: 800px;
+    }
+
+    #checkout #header {
+        padding: 1.3rem 1rem;
+    }
+
+    #checkout #header p {
+        line-height: 1.2;
+        width: 100%;
+        top: 25px;
+        position: relative;
+    }
+
+    .checkout-header-img {
+        top: 19px !important;
+        transform: rotate3d(1, 1, 1, -8deg) !important;
+    }
+
+    .checkout-container {
+        width: 97%;
+        margin: 25px auto;
+        height: 65%;
+    }
+
+    .product img {
+        max-height: 40px;
+        margin: 0 5px;
+    }
+
+    .product div {
+        right: 14px;
+    }
+
+    .security {
+        max-height: 43px;
+        width: auto;
+        margin-bottom: 10px;    
+    }
+}

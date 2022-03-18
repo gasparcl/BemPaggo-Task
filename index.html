@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BemPaggo-Task</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body id="home">
+    <section id="main">
+        <header id="header">
+            <p>Formulário<br>para compra de<br>
+                <span>Pacote de adesivos</span>
+            </p>
+            <div class="header-img">
+                <img src="./src/imgs/Removal-930.png" alt="box">
+            </div>
+        </header>
+        <div class="form-container">
+                <form id="form" onsubmit="event.preventDefault()">
+                    <ul class="form-checkbox"><h4>Quais adesivos:</h4>
+                        <li class="checkbox-item">
+                            <img src="./src/imgs/react.png" alt="react-logo">
+                            <input type="checkbox">react</input>
+                        </li>
+                        <li class="checkbox-item">
+                            <img src="./src/imgs/vuejs.png" alt="vue-logo">
+                            <input type="checkbox">vue</input>
+                        </li>
+                        <li class="checkbox-item">
+                            <img src="./src/imgs/angular.png" alt="angular-logo">
+                            <input type="checkbox">angular</input>
+                        </li>
+                    </ul>
+                    <div id="form-qty">
+                        <h4>Quantos adesivos de cada?</h4>
+                        <div class="qty-container">
+                            <button class="qty-decrease" onmousedown="decreaseQuantity();" type="button">-</button>
+                            <input type="number" id="input-qty" value="1" min="1" max="999" oninput="updateInputValue()" required>
+                            <button class="qty-add" onmousedown="increaseQuantity();" type="button">+</button>
+                        </div>
+                    </div>
+                    <div id="form-text">
+                        <h4>Observações:</h4>
+                        <textarea id="input-text" placeholder="Alguma dúvida? Recado?"></textarea>
+                    </div>
+                </form>
+        </div>
+        <footer id="footer-container">
+            <a href="./checkout.html" id="button" type="button" onmousedown="createItensObject()">enviar</a>
+        </footer>
+    </section>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>
